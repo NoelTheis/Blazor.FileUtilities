@@ -7,16 +7,15 @@
  Uploading was not part of the goal as the existing [Solution](https://learn.microsoft.com/en-us/aspnet/core/blazor/file-uploads?view=aspnetcore-6.0&pivots=webassembly) does not really need much simplification.
 
  The project relies on [MimeTypesMap](https://github.com/hey-red/MimeTypesMap) to figure out the correct mime type for opening files.
-
 ## Targets
     .Net 6
+## Install
+    PM> Install-Package Blazor.FileUtilities
 ## Usage
-
 Add services.
 ```csharp
 Services.AddBlazorFileUtilities();
 ```
-
 Inject the service into any component.
 ```csharp
 @using Blazor.FileUtilities
@@ -36,6 +35,9 @@ Download file from stream.
 ```csharp
 await FileService.Download(stream, FileName);
 ```
+
+## Demo
+[WASM](https://noeltheis.github.io/Blazor.FileUtilities/)
 
 ## License
 [MIT](LICENSE)
