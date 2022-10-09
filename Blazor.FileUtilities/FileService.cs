@@ -9,8 +9,6 @@ public class FileService : IAsyncDisposable
 {
     private readonly Lazy<Task<IJSObjectReference>> moduleTask;
 
-    public event Func<InputFileChangeEventArgs, Task>? FileSelectRequested;
-
     public FileService(IJSRuntime jsRuntime)
     {
         moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
