@@ -24,8 +24,8 @@ jobs:
       run: dotnet publish ./Blazor.FileUtilities.Demo.WASM/Blazor.FileUtilities.Demo.WASM.csproj -c Release -o release --nologo
     
     # changes the base-tag in index.html from '/' to the projects github pages url
-    - name: Change base-tag in index.html from / to BlazorFileUtilities
-      run: sed -i 's/<base href="\/" \/>/<base href="\/https://noeltheis.github.io/Blazor.FileUtilities/\/" \/>/g' release/wwwroot/index.html
+    - name: Change base-tag in index.html from / to the projects github pages url
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor.FileUtilities\/" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
