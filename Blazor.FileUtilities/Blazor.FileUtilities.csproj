@@ -1,19 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Noel Theis</Authors>
+		<Company>None</Company>
+		<Description>Provides easy methods for downloading or opening files in a Blazor application.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl></PackageProjectUrl>
+		<RepositoryUrl>https://github.com/NoelTheis/Blazor.FileUtilities</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageTags>Blazor;Download;Blob;File</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 
-  <ItemGroup>
-    <SupportedPlatform Include="browser" />
-  </ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.8" />
-    <PackageReference Include="MimeTypesMap" Version="1.0.8" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.8" />
+		<PackageReference Include="MimeTypesMap" Version="1.0.8" />
+	</ItemGroup>
 
 </Project>
